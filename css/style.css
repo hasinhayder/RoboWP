@@ -1,0 +1,407 @@
+body{
+	/*background-image:url(../img/clock.jpg);
+	background-size: 100%;
+	background-position: fixed;*/
+	font-family: "Source Sans Pro";
+	/*font-size: 13px;*/
+}
+
+i{
+	background-image: none !important;
+}
+
+.mp0{
+	padding: 0px;
+	margin: 0px;
+}
+
+/** header **/
+.logo{
+	font-family: "Source Sans Pro";
+	padding-top: 2px;
+}
+
+.hcolor{
+	color:#c0392b;
+}
+.header{
+	min-height: 413px;
+	/*width: 1280px;*/
+	overflow: hidden;
+}
+
+.header .thumb{
+
+}
+.header .thumb img{
+	width: 100%;
+}
+.headertext{
+	margin-top:81px;
+	position:absolute;
+	left: 45%;
+	z-index: 100;
+	color: #333;
+	width: 600px;
+	color: #eee;
+
+	background-color: rgba(200,200,200,0.8);
+	border-left:5px solid #d35400;
+	padding:20px;
+	height: 240px;
+}
+
+.moto{
+	margin-top:40px;
+}
+
+
+
+.headertext h1{
+	color: #333;
+	font-family: "Source Sans Pro";
+}
+
+.header-info p{
+	padding:20px 5px;
+	font-size: 15px;
+	line-height: 28px;
+	color:#444;
+	position: relative;
+}
+
+
+/** Slides **/
+
+.rslides_nav{
+	float: left;
+	position: absolute;
+	text-decoration: none;
+}
+.next{
+	position: relative;
+	top: -229px;
+	z-index: 1000;
+	left: 1190px;
+	text-decoration: none;
+	font-size: 26px;
+	color:#444;
+	border:none;
+}
+.prev{
+	position: relative;
+	top: -229px;
+	z-index: 1000;
+	left:25px;
+	text-decoration: none;
+	font-size:26px;
+	color: #444;
+	border: none;
+}
+
+.next:hover, .prev:hover{
+	text-decoration: none;
+	color:#111;
+
+}
+
+/** GotoTop div**/
+.gototop{
+	width: 32px;
+	height: 32px;
+	background-color: rgba(200,200,200,0.8);
+	position: fixed;
+	padding:10px 5px 7px 12px;
+	top:85%;
+	left:90%;
+	display: none;
+}
+
+.topanchor{
+	text-decoration: none;
+	font-size: 30px;
+	color:#444;
+}
+.topanchor:hover{
+	color: #e67e22;
+	text-decoration: none;
+}
+
+/** Nav **/
+
+.navigation-container{
+	/*background-image:url(../img/banner-bg.jpg);*/
+	box-shadow: 1px 1px 5px #222;
+	height: 70px;
+	margin-bottom: 0px;
+	background-color: #222;
+	z-index: 1000;
+
+}
+
+.navigation-container h1{
+	font-size: 24px;
+	color: #ecf0f1;
+	line-height: 70px;
+	font-family: "Lato";
+	font-weight: normal;
+
+}
+.navigation{
+	list-style-type: none;
+	/*float: right;*/
+}
+
+.navigation li{
+	float: left;
+	margin-right: 25px;
+	font-size: 16px;
+	font-family: "Source Sans Pro";
+	height: 66px;
+	line-height: 80px;
+	color: #ecf0f1;
+	text-transform: uppercase;
+	padding:0px 5px;
+	cursor: pointer;
+}
+
+.navigation li a{
+	color: #ecf0f1;
+}
+.navigation li a:hover{
+	color: #e67e22;
+	text-decoration: none;
+}
+
+.navigation li:hover{
+	border-bottom:4px solid #e67e22;
+}
+
+
+.navigation li.active{
+	border-bottom:4px solid #e67e22;
+}
+
+/** Testimonials **/
+.appfeatures{
+	margin-top: -100px;
+	height:170px;
+	background-color: rgba(200,200,200,0.5);
+	padding:40px 0px 0px 0px;
+	margin:-2px 0px 0px 0px;
+	border-top:2px solid #aaa;
+	border-bottom:2px solid #aaa;
+}
+
+.ficon{
+	/*width:72px;
+	height: 72px;
+	border-radius: 36px !important;*/
+}
+
+.ftext{
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.ftag{
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.ftime{
+	color: #c0392b;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+/** Footer **/
+.footer{
+	height: 130px;
+	background-image:url(../img/debut_dark.png);
+	color: #bbb;
+	font-size: 13px;
+	font-family: "Source Sans Pro";
+
+}
+
+.footer-text h2{
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin:0px;
+	padding:0px;
+	margin-top:20px;
+}
+
+.social-icons{
+	padding-top: 40px;
+	text-align: right;
+}
+
+.social-icons img{
+	border-radius: 16px;
+	margin-right: 5px;
+}
+/** Posts Section **/
+.bg1{
+	background-image: url(../img/pattern/br3.jpg);
+	background-size: 100%;
+}
+.bg2{
+	background-image: url(../img/pattern/br4.jpg);
+	background-size: 100%;
+}
+.bg3{
+	background-image: url(../img/pattern/br2.jpg);
+	background-size: 100%;
+}
+.bg4{
+	background-image: url(../img/pattern/br1.jpg);
+	background-size: 100%;
+}.bg6{
+	background-image: url(../img/pattern/br7.png);
+	background-size: 100%;
+}
+.post{
+	min-height: 600px;
+	padding:60px 0px 0px 0px;
+}
+.post .title{
+	margin-top: 80px;
+	/*background-color: #95a5a6;*/
+	height:60px;
+	width: 400px;
+}
+.post .title h1{
+	font-size: 28px;
+	font-weight: normal;
+	font-family: "Lato";
+	margin:0px;
+	padding:0px 20px;
+	line-height: 60px;
+}
+
+.post .content{
+	padding:20px;
+	color: #222;
+	/*background-color: rgba(200,200,200,0.9);*/
+}
+
+.post .content p{
+	font-size: 14px;
+	line-height: 32px;
+}
+
+/** Team Members **/
+.team-title h1{
+	font-size:28px;
+	margin:0px;
+	padding-top: 0px;
+	text-align: center;
+	margin-bottom: 65px;
+	font-weight: normal;
+	/*font-family: 'Pompiere', cursive;*/
+	font-family: "Lato";
+}
+
+.team-subtitle h2{
+	margin: 0px 100px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-family: "Lato";
+}
+.team{
+	padding:80px 0px; 
+}
+
+.profile-pic{
+	width: 50%;
+	margin: auto;
+}
+
+.profile-pic img{
+	margin:auto;
+}
+
+.profile-content{
+	font-size: 13px;
+	line-height: 24px;
+	padding:30px 45px;
+	text-align: justify;
+}
+
+.profile-content h2{
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+
+/**Subscribe Form**/
+.signupform{
+	/*background-color: #ecf0f1;*/
+	height:150px;
+	margin-bottom: 25px;
+	border-top:6px solid #bdc3c7;
+	/*border-bottom:1px solid #bdc3c7;*/
+}
+
+.signupform form{
+	padding: 20px;
+	padding-top:30px;
+	padding-left: 100px;
+	background-image: url(../img/Envelope.png);
+	background-repeat: no-repeat;
+	background-position: 20px 55px;
+	font-family: "Source Sans Pro";
+	font-size: 18px;
+}
+
+.signupform form input[type='text']{
+	width:320px;
+	height:30px;
+	border:1px solid #bbb;
+	padding-left:10px;
+	color:#444;
+}
+
+.signupform form input[type='submit']{
+	width:100px;
+	height:30px;
+	border:none;
+	background-color: #c0392b;
+	height: 38px;
+	vertical-align: top;
+	color: #fff;
+}
+
+/** Media Query **/
+@media screen and (max-width: 1400px){
+	.header{
+		height:430px;
+	}
+
+	.headertext{
+		left:43%;
+	}
+}
+@media screen and (max-width: 1280px){
+	.header{
+		height:414px;
+	}
+
+	.headertext{
+		left:43%;
+	}
+}
+
+/** Map **/
+#gmap{
+	display: none;
+}
