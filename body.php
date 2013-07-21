@@ -20,64 +20,48 @@
 	</div>
 </div>
 <ul class="rslides">
-	<li>
-		<div class="header">
-			<div class="thumb">
-				<img src="img/banner-bg2.jpg" alt=""/>
-			</div>
-			<div class="headertext">
-				<div class="moto">
-					<h1>WE WILL LAUNCH ON <span class="hcolor">20TH JULY</span> </h1>
-				</div>
-				<div class="header-info">
-					<p>
+	<?php
+	$connected_posts = new WP_Query( array(
+		'connected_type' => 'slider_to_pages',
+		'connected_items' => get_queried_object(),
+		'nopaging' => false,
+		'order'=>'ASC',
+		'count'=>1,
+		'posts_per_page'=>'3'
+		) );
 
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					</p>
+	if($connected_posts->have_posts()){
+		$i=0;
+		while($connected_posts->have_posts()){
+			$connected_posts->the_post();
+			?>
+			<li>
+				<div class="header">
+					<div class="thumb">
+						<?php the_post_thumbnail( );?>
+					</div>
+					<div class="headertext">
+						<div class="moto">
+							<h1><?php the_title();?> </h1>
+						</div>
+						<div class="header-info">
+							<?php the_content();?>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="header">
-			<div class="thumb">
-				<img src="img/banner.jpg" alt=""/>
-			</div>
-			<div class="headertext">
-				<div class="moto"><h1>NEED <span class='hcolor days'>FEW DAYS</span> & <span class='hcolor hours'>FEW HOURS</span> MORE</h1></div>
-				<div class="header-info">
-					<p>
-
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					</p>
-				</div>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="header">
-			<div class="thumb">
-				<img src="img/banner3.jpg" alt=""/>
-			</div>
-			<div class="headertext">
-				<div class="moto">
-					<h1>SOMETHING MORE <span class="hcolor">GOES HERE</span> </h1>
-				</div>
-				<div class="header-info">
-					<p>
-
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					</p>
-				</div>
-			</div>
-		</div>
-	</li>
+			</li>
+			<?php 
+		} 
+	}
+	?>
+	
 </ul>
 <div class="appfeatures" id="features">
 	<div class="container">
 		<div class="row">
 			<?php
 				//get the connected posts
+			$feat_span_length=$feat_text_length=0;
 			wp_reset_query();
 			$connected_posts = new WP_Query( array(
 				'connected_type' => 'feature_to_pages',
@@ -87,6 +71,10 @@
 				'count'=>1,
 				'posts_per_page'=>'3'
 				) );
+			$ftpc = $connected_posts->post_count;
+			$lengths = array(0=>array(0,0),1=>array(12=>11),2=>array(6,5),3=>array(4,3));
+			list($feat_span_length,$feat_text_length) = $lengths[$ftpc];
+
 			if($connected_posts->have_posts()){
 				$i=0;
 				while($connected_posts->have_posts()){
@@ -118,6 +106,8 @@
 </div>
 <?php
 	//get the connected posts
+$options = get_option("your_theme");
+
 wp_reset_query();
 $connected_posts = new WP_Query( array(
 	'connected_type' => 'posts_to_pages',
@@ -127,6 +117,7 @@ $connected_posts = new WP_Query( array(
 	'count'=>1,
 	'posts_per_page'=>'10'
 	) );
+$ptpc = $connected_posts->post_count; //post to pages post count
 if($connected_posts->have_posts()){
 	$i=0;
 	while($connected_posts->have_posts()){
@@ -147,7 +138,7 @@ if($connected_posts->have_posts()){
 					<div class="span6">
 						<div class="postcontent">
 							<div class="title">
-								<h1><?php the_title();?></h1>
+								<h1><?php the_title(); ?></h1>
 							</div>
 							<div class="content">
 								<?php the_content(  );?>
@@ -196,6 +187,7 @@ if($connected_posts->have_posts()){
 				'count'=>1,
 				'posts_per_page'=>'3'
 				) );
+			$ttpc = $connected_posts->post_count; //team to pages post count
 			if($connected_posts->have_posts()){
 				$i=0;
 				while($connected_posts->have_posts()){

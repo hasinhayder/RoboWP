@@ -1,4 +1,5 @@
 <?php
+require_once("admin/options.php");
 show_admin_bar( false );
 add_theme_support( "post-thumbnails" );
 add_action("wp_enqueue_scripts","styles_and_scripts");
