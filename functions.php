@@ -230,4 +230,15 @@ function background_attachment( array $meta_boxes ) {
 
 	return $meta_boxes;
 }
+
+function rich_title($args){
+	global $post;
+    if(!is_admin()){
+        return $mod = preg_replace("~\*([\w\s]+)\*~", "<span class='hcolor'>$1</span>", $args);
+    }
+    else
+       return $args;
+}
+
+add_filter("the_title","rich_title");
 ?>

@@ -87,7 +87,7 @@
 							</div>
 							<div class="span3">
 								<p class="fhead">
-									<span class='ftag'><?php the_title();?></span>
+									<?php echo get_the_title();?>
 									<!-- <span class='ftime'>Jan 2013</span> -->
 								</p>
 								<p class="ftext">
@@ -138,7 +138,7 @@ if($connected_posts->have_posts()){
 					<div class="span6">
 						<div class="postcontent">
 							<div class="title">
-								<h1><?php the_title(); ?></h1>
+								<h1><?php echo get_the_title(); ?></h1>
 							</div>
 							<div class="content">
 								<?php the_content(  );?>
