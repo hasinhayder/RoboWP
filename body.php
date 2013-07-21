@@ -88,7 +88,7 @@
 							<div class="span3">
 								<p class="fhead">
 									<span class='ftag'><?php the_title();?></span>
-									<span class='ftime'>Jan 2013</span>
+									<!-- <span class='ftime'>Jan 2013</span> -->
 								</p>
 								<p class="ftext">
 									<?php the_content();?>
