@@ -1,3 +1,4 @@
+<?php if(is_page_template("homepage-template.php")) { ?>
 <div class='footer'>
 	<div class="container">
 		<div class="row">
@@ -27,6 +28,7 @@
 		</div>
 	</div>
 </div>
+<?php } ?>
 <?php wp_footer();?>
 </body>
 </html>

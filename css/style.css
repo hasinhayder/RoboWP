@@ -405,3 +405,21 @@ i{
 #gmap{
 	display: none;
 }
+
+/** Instructions **/
+.instructions{
+	padding:80px 40px;
+}
+
+.instructions h4{
+	font-size: 22px;
+	font-family: "Source Sans Pro";
+	font-weight: normal;
+	margin-bottom: 30px;
+	/*text-decoration: underline;*/
+}
+
+.instructions i{
+	margin-right: 10px;
+	margin-left: 10px;
+}
