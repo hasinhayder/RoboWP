@@ -218,9 +218,9 @@ if($connected_posts->have_posts()){
 			<div class="span3"></div>
 			<div class="span6">
 				<div class="signupform">
-					<form action="">
+					<form method="POST" target="_blank" action="http://themio.us1.list-manage.com/subscribe/post">
 						<p>Subscribe to our mailing list & stay tuned</p>
-						<input type='text' id='email'/>
+						<input type='text' id='EMAIL' name="EMAIL"/>
 						<input type='submit' id='submit' name="submit" value="Subscribe"/>
 					</form>
 				</div>
@@ -231,6 +231,7 @@ if($connected_posts->have_posts()){
 </div>
 <div class="map">
 	<div id="map_canvas">
-		<iframe id="gmap" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Michigan,+United+States&amp;aq=0&amp;oq=Mi&amp;sll=37.0625,-95.677068&amp;sspn=38.775203,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Michigan&amp;t=m&amp;ll=44.406807,-85.347118&amp;spn=0.058864,0.109863&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+		<?php echo do_shortcode( "[gmaps height='350px' width='100%' center='23.7,90.3833333' zoom=13]" );?>
+		<!-- <iframe id="gmap" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Michigan,+United+States&amp;aq=0&amp;oq=Mi&amp;sll=37.0625,-95.677068&amp;sspn=38.775203,79.013672&amp;ie=UTF8&amp;hq=&amp;hnear=Michigan&amp;t=m&amp;ll=44.406807,-85.347118&amp;spn=0.058864,0.109863&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe> -->
 	</div>
 </div>

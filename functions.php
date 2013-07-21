@@ -1,5 +1,4 @@
 <?php
-require_once("admin/options.php");
 show_admin_bar( false );
 add_theme_support( "post-thumbnails" );
 add_action("wp_enqueue_scripts","styles_and_scripts");
@@ -234,7 +233,7 @@ function background_attachment( array $meta_boxes ) {
 function rich_title($args){
 	global $post;
     if(!is_admin()){
-        return $mod = preg_replace("~\*([\w\s]+)\*~", "<span class='hcolor'>$1</span>", $args);
+        return $mod = preg_replace("~\*([\S\s]+)\*~", "<span class='hcolor'>$1</span>", $args);
     }
     else
        return $args;
