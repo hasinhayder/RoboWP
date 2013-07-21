@@ -23,6 +23,15 @@ function styles_and_scripts(){
 
 add_action( 'widgets_init', 'custom_footer' );
 function custom_footer()  {
+	$args0 = array(
+		'id'            => 'dummy-area',
+		'name'          => __('This has no Effect',"robowp"),
+		'description'   => __('This has no Effect',"robowp"),
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>',
+		'before_widget' => '',
+		'after_widget'  => '',
+		);
 	$args1 = array(
 		'id'            => 'footer-left',
 		'name'          => __('Footer Left',"robowp"),
