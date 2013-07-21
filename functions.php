@@ -345,4 +345,51 @@ $theme_text_domain = 'robowp';
 tgmpa( $plugins, $config );
 
 }
+
+
+/**
+ * Custom header color and backgrounds
+ */
+$hdefaults = array(
+	'default-image'          => '',
+	'random-default'         => false,
+	'width'                  => 0,
+	'height'                 => 0,
+	'flex-height'            => false,
+	'flex-width'             => false,
+	'default-text-color'     => '333333',
+	'header-text'            => true,
+	'uploads'                => true,
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => 'custom_header_preview',
+	);
+if ( version_compare( $wp_version, '3.4', '>=' ) )
+	add_theme_support( 'custom-header', $hdefaults );
+else
+	add_custom_image_header( $wp_head_callback, $admin_head_callback, $admin_preview_callback );
+
+
+/**
+ * Custom header preview callback for custom header feature
+ */
+
+function custom_header_preview() { ?>
+<div id="headimg">
+	<?php
+	if ( 'blank' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) || '' == get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) )
+		$style = ' style="display:none;"';
+	else
+		$style = ' style="color:#' . get_theme_mod( 'header_textcolor', HEADER_TEXTCOLOR ) . ';"';
+	?>
+	<?php $header_image = get_header_image();
+	if ( ! empty( $header_image ) ) : ?>
+	<img src="<?php echo esc_url( $header_image ); ?>" alt="" />
+<?php else: ?>
+	<div id="masthead">
+		<h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+	</div>
+<?php endif; ?>
+</div>
+<?php } 
 ?>

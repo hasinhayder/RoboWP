@@ -1,24 +1,3 @@
-<div class="gototop">
-	<a href='#home' class="topanchor"><i class='icon-chevron-sign-up'></i></a>
-</div>
-<div class="navigation-container" id="home">
-	<div class="container">
-		<div class="row">
-			<div class="span6">
-				<h1 class="mp0 logo">ROBO COMPANY</h1>
-			</div>
-			<div class="span6">
-				<ul class="navigation mp0 pull-right">
-					<li class='homelink'><a href='#home'>Home</a></li>
-					<li class="active"><a href='#features'>Features</a></li>
-					<li><a href='#news'>News</a></li>
-					<li><a href='#team'>Team</a></li>
-					<li><a href='#location'>Location</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
 <ul class="rslides">
 	<?php
 	$connected_posts = new WP_Query( array(
