@@ -8,7 +8,7 @@ function styles_and_scripts(){
 	wp_enqueue_style( "bootstrap", "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css", null,  false );
 	wp_enqueue_style( "lato", "http://fonts.googleapis.com/css?family=Lato:400", null,  false  );
 	wp_enqueue_style( "sourcesans", "http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900", null,  false );
-	wp_enqueue_style( "appstyle", get_template_directory_uri() ."/css/style.css", null, false );
+	wp_enqueue_style( "appstyle", get_template_directory_uri() ."/css/style.css", null, "2.0" );
 	wp_enqueue_style( "fontawesome", get_template_directory_uri(). "/css/font-awesome.css", false,  false );
 	wp_enqueue_style( "responsiveslidercss", get_template_directory_uri() ."/css/responsiveslides.css", null,  false );
 
