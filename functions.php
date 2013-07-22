@@ -51,6 +51,7 @@ function custom_footer()  {
 		'after_widget'  => '',
 		);
 
+	register_sidebar( $args0 );
 	register_sidebar( $args1 );
 	register_sidebar( $args2 );
 }
