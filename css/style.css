@@ -28,6 +28,7 @@ i{
 	min-height: 413px;
 	/*width: 1280px;*/
 	overflow: hidden;
+	height: auto;
 }
 
 .header .thumb{
