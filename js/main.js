@@ -5,6 +5,7 @@ $(document).ready(function(){
 	var h = $(document).height();
 	var safeh = h-100-$(window).height();
 	// console.log(safeh);
+	// alert($(".thumb img").height());
 	$(".header").css("height",($(".thumb img").height()));
 	$(".next").css({"left":(w-70),display:"block"});
 
